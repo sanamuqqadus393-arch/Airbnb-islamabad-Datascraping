@@ -74,4 +74,11 @@ st.dataframe(filtered_df)
 
 # ---------- FOOTER ----------
 st.markdown("---")
+# ___________Download _________
+st.download_button(
+    label="Download Data as CSV",
+    data=filtered_df.to_csv(index=False),
+    file_name='airbnb_data.csv',
+    mime='text/csv'
+)
 st.caption("@sanamuqqadus | Data for educational purposes")
